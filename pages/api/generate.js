@@ -15,23 +15,28 @@ export default async function (req, res) {
     return;
   }
 
-  const animal = req.body.animal || '';
-  if (animal.trim().length === 0) {
+  const question = req.body.question || '';
+  const context = req.body.currentContext || '';
+  if (question.trim().length === 0) {
     res.status(400).json({
       error: {
-        message: "Please enter a valid animal",
+        message: "Please enter a valid question",
       }
     });
     return;
   }
 
+  // use the API to generate future text from the provided input
   try {
+    const prompt = generatePrompt(question, context);
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: generatePrompt(animal),
+      prompt: prompt,
       temperature: 0.6,
+      max_tokens: 100,
     });
-    res.status(200).json({ result: completion.data.choices[0].text });
+    const answer = completion.data.choices[0].text;
+    res.status(200).json({ result: answer, newContext: prompt + answer});
   } catch(error) {
     // Consider adjusting the error handling logic for your use case
     if (error.response) {
@@ -48,15 +53,8 @@ export default async function (req, res) {
   }
 }
 
-function generatePrompt(animal) {
-  const capitalizedAnimal =
-    animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-  return `Suggest three names for an animal that is a superhero.
-
-Animal: Cat
-Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
-Animal: Dog
-Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
-Animal: ${capitalizedAnimal}
-Names:`;
+// create the prompt that will be given to the text generator
+function generatePrompt(question, context) {
+  const prompt = context + '\nPlease concisely answer the following question based on the information that I have provided to you, and do not answer the question if it is unrelated to my medical records: ' + question;
+  return prompt;
 }

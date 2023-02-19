@@ -1,0 +1,65 @@
+{
+    "records": [
+      {
+        "date": "2022-01-10",
+        "procedure": "Annual Physical Exam",
+        "doctor": "Dr. Sarah Lee",
+        "next_steps": "Follow-up appointment in 6 months for cholesterol recheck"
+      },
+      {
+        "date": "2022-03-05",
+        "procedure": "Flu Vaccine",
+        "doctor": "Nurse Practitioner John Smith",
+        "next_steps": "No further action required"
+      },
+      {
+        "date": "2022-04-02",
+        "procedure": "Eye Exam",
+        "doctor": "Optometrist David Kim",
+        "next_steps": "Update glasses prescription, purchase new glasses"
+      },
+      {
+        "date": "2022-05-20",
+        "procedure": "Blood Test",
+        "doctor": "Dr. Jessica Chen",
+        "next_steps": "Follow-up appointment to discuss results"
+      },
+      {
+        "date": "2022-06-15",
+        "procedure": "Dermatology Checkup",
+        "doctor": "Dr. Robert Williams",
+        "next_steps": "Schedule biopsy for suspicious mole on back"
+      },
+      {
+        "date": "2022-07-03",
+        "procedure": "COVID-19 Test",
+        "doctor": "Nurse Practitioner Maria Rodriguez",
+        "next_steps": "Quarantine for 10 days"
+      },
+      {
+        "date": "2022-08-01",
+        "procedure": "Dental Cleaning",
+        "doctor": "Dr. Emily Lee",
+        "next_steps": "Schedule follow-up appointment in 6 months"
+      },
+      {
+        "date": "2022-09-10",
+        "procedure": "Tetanus Booster",
+        "doctor": "Nurse Practitioner John Smith",
+        "next_steps": "No further action required"
+      },
+      {
+        "date": "2022-10-08",
+        "procedure": "Colonoscopy",
+        "doctor": "Dr. James Kim",
+        "next_steps": "Await results, follow-up appointment in 1 year"
+      },
+      {
+        "date": "2022-11-20",
+        "procedure": "Mental Health Checkup",
+        "doctor": "Psychologist Sarah Chang",
+        "next_steps": "Schedule follow-up appointment in 3 months"
+      }
+    ]
+  }
+  
