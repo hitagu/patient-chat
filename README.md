@@ -1,6 +1,6 @@
 # Patient Chat Bot made with OpenAI API
 
-This app provides a way for patients to easily access details from their medical records. They can simply ask a question about their medical records and receive a response generated with OpenAI's API for GPT-3. This app uses [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). The code and instructions below were inspired by OpenAI's Node.js tutorial here [https://github.com/openai/openai-quickstart-node].
+This app provides a way for patients to easily access details from their medical records. They can simply ask a question about their medical records and receive a response generated with OpenAI's API for GPT-3. This app uses [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). The code and instructions below were inspired by OpenAI's Node.js tutorial [here](https://github.com/openai/openai-quickstart-node).
 
 ## Setup
 
