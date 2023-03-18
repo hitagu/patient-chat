@@ -55,6 +55,6 @@ export default async function (req, res) {
 
 // create the prompt that will be given to the text generator
 function generatePrompt(question, context) {
-  const prompt = context + '\nPlease concisely answer the following question based on the information that I have provided to you, and do not answer the question if it is unrelated to my medical records: ' + question;
+  const prompt = context + '\nPlease concisely answer the following question based on the information that I have provided to you, and do not answer the question if it is unrelated to my medical records: ' + question + '?';
   return prompt;
 }
